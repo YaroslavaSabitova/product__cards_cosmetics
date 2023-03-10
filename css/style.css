@@ -50,6 +50,10 @@ ul, ol {
   list-style: none;
 }
 
+.center {
+  text-align: center;
+}
+
 .main-content {
   width: 130rem;
   margin: 0 auto;
@@ -64,6 +68,12 @@ ul, ol {
   line-height: 7.8rem;
   margin-bottom: 11rem;
   text-align: center;
+  text-shadow: 2px 2px 0 #F7F7FA, 4px 4px 0 #A5A3B9;
+  transition: .3s ease;
+}
+
+.title:hover {
+  text-shadow: 2px 2px 0 #A5A3B9, 4px 4px 0 #3e39bb;
 }
 
 .cards-items {
@@ -114,8 +124,49 @@ ul, ol {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 2.5rem;
 }
 
 .card__price-info {
   font-weight: 700;
+}
+
+.card__button {
+  cursor: pointer;
+  display: inline-block;
+  color: #515076;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1.5rem 4.5rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px #F7F7FA;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(#F7F7FA 0%, #c1bfee 35%, #a9a8cd 50%, #c1bfee 51%, #F7F7FA 100%);
+}
+
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animated::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 45px;
+  height: 100%;
+  transform: translateX(-85px) skewX(-45deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7));
+  animation: flash 3s linear infinite;
+}
+
+@keyframes flash {
+  20% {
+    transform: translateX(500%) skewX(-45deg);
+  }
+  100% {
+    transform: translateX(500%) skewX(-45deg);
+  }
 }
