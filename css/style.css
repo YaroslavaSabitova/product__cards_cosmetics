@@ -1,0 +1,73 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #515076;
+  position: relative;
+}
+
+main {
+  overflow: hidden;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a, address {
+  color: #515076;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease;
+}
+
+a:hover, a:active, address:hover, address:active {
+  color: #4e4ab1;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  text-transform: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.main-content {
+  width: 130rem;
+  margin: 0 auto;
+  padding: 22rem 8.5rem 0;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: -1px -44px;
+}
+
+.cards-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4.5rem;
+}
+
+.card {
+  width: 34rem;
+}
