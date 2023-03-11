@@ -55,12 +55,29 @@ ul, ol {
 }
 
 .main-content {
-  width: 130rem;
+  width: 113rem;
   margin: 0 auto;
-  padding: 22rem 8.5rem;
+  padding: 22rem 0;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
-  background-position: 98px -44px;
+  background-position: 1rem -4.4rem;
+}
+
+.products {
+  position: relative;
+}
+
+.background__rotate {
+  width: 80rem;
+  height: 70rem;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: 0px 14rem;
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: -40rem;
+  right: 0;
+  z-index: -1;
 }
 
 .title {
@@ -122,13 +139,13 @@ ul, ol {
 .card__category {
   color: #A5A3B9;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 1.2rem;
 }
 
 .card__title {
   line-height: 2.7rem;
   font-weight: 700;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 .card__description {
@@ -141,11 +158,11 @@ ul, ol {
 
 .card__features {
   list-style-type: circle;
-  margin: 0 0 2.5rem 1rem;
+  margin: 0 0 2.5rem 1.5rem;
 }
 
-.card__features li {
-  margin-bottom: .5rem;
+.card__features li::marker {
+  font-size: 2rem;
 }
 
 .card__price {
@@ -183,6 +200,7 @@ ul, ol {
   display: block;
   position: relative;
   font-size: 2rem;
+  font-weight: 400;
   line-height: 2.4rem;
   color: #3e39bb;
   transition: all 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
@@ -203,13 +221,17 @@ ul, ol {
   display: inline-block;
   color: #515076;
   font-size: 2rem;
+  font-weight: 500;
   line-height: 2.4rem;
   padding: 1.5rem 4.5rem;
   border: none;
   border-radius: 1rem;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px #F7F7FA;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(#F7F7FA 5%, #c1bfee 55%, #a9a8cd 67%, #c1bfee 51%, #F7F7FA 100%);
+}
+
+.card__price-info > .card__price:hover + .card__turn > .card__turn-value {
+  transform: translateX(0) translateY(-100%);
 }
 
 .btn-animated {
@@ -236,8 +258,4 @@ ul, ol {
   100% {
     transform: translateX(500%) skewX(-45deg);
   }
-}
-
-.card__price-info > .card__price:hover + .card__turn > .card__turn-value {
-  transform: translateX(0) translateY(-100%);
 }
