@@ -52,9 +52,6 @@ h3
     line-height: 2.4rem
     transition: .3s ease
 
-    &:hover
-        color: $added-color
-
 p, li
     font-size: 1.3rem
     line-height: 1.8rem
@@ -128,8 +125,15 @@ ul, ol
     background-color: $color-grey
     box-shadow: $img-shadow
     transition: .3s
+
     &:hover
         box-shadow: $box-shadow
+
+    &:hover .card__title
+        color: $added-color
+
+    &:hover .card__price
+        color: $added-color
 
     img
         transition: .3s ease
@@ -166,8 +170,6 @@ ul, ol
         font-weight: 700
         margin-bottom: 3rem
         transition: .3s
-        &:hover
-            color: $added-color
 
     &__turn
         position: absolute
